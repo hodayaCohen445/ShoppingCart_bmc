@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ShoppingCart
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# ShoppingCart_bmc
+Full-featured Angular Shopping Cart application with Registration, Login, Product listing, Cart management, and End-to-End testing using Playwright.
+>>>>>>> 123ca50a8bca8fab3837b4f43b66492c6e19bedc
