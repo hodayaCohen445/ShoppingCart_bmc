@@ -1,0 +1,137 @@
+.register-page {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../../assets/images/products/shopping-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome-section {
+    width: 30%;
+    background: linear-gradient(135deg, #5bb0f6, #3498db);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+  
+.form-section {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.form-container {
+    width: 300px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.form-container h2 {
+    margin: 0 0 1.5rem 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    padding: 10px 5px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+  
+input:focus {
+    border-bottom: 2px solid #3498db;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.input-container .icon {
+    margin-right: 10px;
+    color: #888;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+  
+.input-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #333;
+}
+  
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+  
+.input-wrapper input:focus {
+    border-bottom: 2px solid #3498db;
+}
+
+button {
+    background-color: #5dade2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+  
+.login-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.welcome-section h1 {
+    font-size: 35px; /* במקום 36px */
+}
+

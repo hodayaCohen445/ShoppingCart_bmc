@@ -1,0 +1,44 @@
+<div class="form-container">
+  <h2>Sign up</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Email -->
+    <div class="input-wrapper">
+      <i class="fa fa-envelope"></i>
+      <input type="email" formControlName="email" placeholder="Your Email" />
+    </div>
+    <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error">
+      Email must be valid
+    </div>
+    <!-- Password -->
+    <div class="input-wrapper">
+      <i class="fa fa-lock"></i>
+      <input type="password" formControlName="password" placeholder="Password" />
+    </div>
+    <div *ngIf="registerForm.get('password')?.errors?.['minlength'] && registerForm.get('password')?.touched" class="error">
+      Password must be at least 6 characters
+    </div>
+    <div *ngIf="registerForm.get('password')?.errors?.['pattern'] && registerForm.get('password')?.touched" class="error">
+      Password must contain at least one uppercase letter
+    </div>
+    <!-- Confirm Password -->
+    <div class="input-wrapper">
+      <i class="fa fa-lock"></i>
+      <input type="password" formControlName="confirmPassword" placeholder="Repeat your password" />
+    </div>
+    <div *ngIf="registerForm.errors?.['passwordsMismatch'] && registerForm.get('confirmPassword')?.touched" class="error">
+      Passwords do not match
+    </div>
+    <!-- User Exists -->
+    <div *ngIf="userExists" class="error">
+      User already exists
+    </div>
+    <!-- Submit -->
+    <button type="submit">Register</button>
+
+    <!-- Link to login -->
+    <div class="login-link">
+      Already have an account? <a routerLink="/login">Sign in</a>
+    </div>
+  </form>
+</div>
+  

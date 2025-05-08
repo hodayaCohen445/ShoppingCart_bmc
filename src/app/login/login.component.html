@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h2>Sign in</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <!-- Email -->
+    <div class="input-wrapper">
+      <i class="fa fa-envelope"></i>
+      <input type="email" formControlName="email" placeholder="Your Email" />
+    </div>
+    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+      Email must be valid
+    </div>
+    <!-- Password -->
+    <div class="input-wrapper">
+      <i class="fa fa-lock"></i>
+      <input type="password" formControlName="password" placeholder="Password" />
+    </div>
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+      Password is required
+    </div>
+    <!-- Login Error -->
+    <div *ngIf="loginError" class="error">
+      Invalid email or password
+    </div>
+    <!-- Submit -->
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    <!-- Link to sign iup -->
+    <div class="login-link">
+      Don't have an account? <a routerLink="/Register">Sign up</a>
+    </div>
+  </form>
+</div>
+  
